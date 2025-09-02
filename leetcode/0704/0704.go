@@ -1,6 +1,6 @@
+// https://leetcode.com/problems/binary-search
 package main
 
-// https://leetcode.com/problems/binary-search
 func search(nums []int, target int) int {
 	// Searches for the interval of [l, r).
 	l, r := 0, len(nums)
