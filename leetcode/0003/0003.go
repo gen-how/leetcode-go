@@ -1,5 +1,6 @@
 package leetcode
 
+// https://leetcode.com/problems/longest-substring-without-repeating-characters
 func lengthOfLongestSubstring(s string) int {
 	// This assumes that `s` contains only ASCII characters.
 	charIndices := [256]int{0}
