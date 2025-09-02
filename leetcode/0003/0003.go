@@ -1,6 +1,6 @@
-package leetcode
-
 // https://leetcode.com/problems/longest-substring-without-repeating-characters
+package main
+
 func lengthOfLongestSubstring(s string) int {
 	// This assumes that `s` contains only ASCII characters.
 	charIndices := [256]int{0}
@@ -18,7 +18,6 @@ func lengthOfLongestSubstring(s string) int {
 }
 
 /* Uses sliding window and hash map which stores the index of characters.
-
 func lengthOfLongestSubstring(s string) int {
 	charIndices := make(map[byte]int)
 	maxLen := 0
@@ -35,7 +34,6 @@ func lengthOfLongestSubstring(s string) int {
 */
 
 /* Uses sliding window and hash map which stores the frequency of characters.
-
 func lengthOfLongestSubstring(s string) int {
 	charFreq := make(map[byte]int)
 	maxLen := 0
@@ -53,24 +51,8 @@ func lengthOfLongestSubstring(s string) int {
 */
 
 /* Uses sliding window and Set
-
-type Set[T comparable] map[T]struct{}
-
-func (s Set[T]) Add(key T) {
-	s[key] = struct{}{}
-}
-
-func (s Set[T]) Has(key T) bool {
-	_, exists := s[key]
-	return exists
-}
-
-func (s Set[T]) Remove(key T) {
-	delete(s, key)
-}
-
 func lengthOfLongestSubstring(s string) int {
-	charSet := make(Set[byte])
+	charSet := make(set[byte])
 	maxLen := 0
 	l := 0
 	for r := 0; r < len(s); r++ {

@@ -1,11 +1,11 @@
-package leetcode
+// https://leetcode.com/problems/add-two-numbers
+package main
 
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-// https://leetcode.com/problems/add-two-numbers
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	carry := 0
 	head := &ListNode{}
